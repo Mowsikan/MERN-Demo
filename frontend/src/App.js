@@ -6,16 +6,6 @@ import Navbar from './components/Navbar'
 
 function App() {
 
-  useEffect(() => {
-    // Replace with your deployed backend URL from Vercel
-    axios.get('https://mern-demo-server2.vercel.app/')
-      .then(response => {
-        setWorkouts(response.data); // Set the workouts to the state
-      })
-      .catch(error => {
-        console.error("There was an error fetching the workouts!", error);
-      });
-  }, []);
   return (
     <div className="App">
       <BrowserRouter>

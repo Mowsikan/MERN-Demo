@@ -12,10 +12,7 @@ const Home = () => {
     const fetchWorkouts = async () => {
       const response = await fetch('/api/workouts')
       const json = await response.json()
-      useEffect(() => {
-        // Replace with your deployed backend URL from Render
-      
-      }, []);
+     
 
       if (response.ok) {
         dispatch({type: 'SET_WORKOUTS', payload: json})
