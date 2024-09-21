@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect,useState } from "react"
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 
 // components
@@ -12,6 +12,10 @@ const Home = () => {
     const fetchWorkouts = async () => {
       const response = await fetch('/api/workouts')
       const json = await response.json()
+      useEffect(() => {
+        // Replace with your deployed backend URL from Render
+      
+      }, []);
 
       if (response.ok) {
         dispatch({type: 'SET_WORKOUTS', payload: json})

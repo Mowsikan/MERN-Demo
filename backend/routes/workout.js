@@ -8,6 +8,8 @@ const {
     deleteWorkout,
     updateWorkout
 } = require('../controllers/workoutControllers')
+
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 //get all workouts
 
 router.get('/',getWorkouts)
